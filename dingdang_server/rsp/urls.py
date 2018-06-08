@@ -5,6 +5,6 @@ from . import views
 app_name = 'rsp'
 
 urlpatterns = [
-    path('login/', views.LoginView name='login'),
-    path('upload/', name='upload'),
+    path('login/', views.login, name='login'),
+    path('upload/', views.upload, name='upload'),
 ]

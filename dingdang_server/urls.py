@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
+from .rsp import urls as rsp_urls
+from .android import urls as android_urls
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path(r'admin/', admin.site.urls),
+    path(r'rsp/', include('dingdang_server.rsp.urls')),
+    path(r'android/', include('dingdang_server.android.urls'))
 ]

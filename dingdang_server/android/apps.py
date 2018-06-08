@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class AndroidConfig(AppConfig):
-    name = 'android'
+    name = 'dingdang_server.android'
