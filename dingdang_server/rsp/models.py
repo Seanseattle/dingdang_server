@@ -22,6 +22,7 @@ class Users(models.Model):
 class Messages(models.Model):
     # rsp send message to mobile
     email = models.CharField(max_length=30)
+    # type values: 'clock', 'todo', 'shoplist'
     type = models.CharField(max_length=20)
     message = models.TextField()
     # message is posted to mobile or not
