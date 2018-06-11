@@ -1,11 +1,8 @@
 from dingdang_server.rsp.models import Messages
 from dingdang_server.rsp.models import Users
-from django.contrib.auth.hashers import check_password, make_password
+from django.contrib.auth.hashers import check_password
 from django.http.response import HttpResponse
 from django.core import serializers
-from django.contrib.auth.tokens import default_token_generator
-from django.contrib.auth import authenticate
-from rest_framework.authtoken.models import Token
 import json
 import logging
 
