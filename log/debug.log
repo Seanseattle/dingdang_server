@@ -1,0 +1,857 @@
+2018-06-08 15:07:57,176 [Thread-2:140256737355520] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/login/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 65, in login
+    if check_password(login_data['password'], check_user.get('password')) is False:
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1150, in build_filter
+    arg, value = filter_expr
+ValueError: too many values to unpack (expected 2)
+2018-06-08 15:12:24,392 [Thread-7:140230571583232] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/login/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 65, in login
+    if check_password(login_data['password'], check_user.get('password')) is False:
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1150, in build_filter
+    arg, value = filter_expr
+ValueError: too many values to unpack (expected 2)
+2018-06-08 15:30:27,775 [Thread-7:140345802352384] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/login/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 76, in login
+    'data': default_token_generator.make_token(check_user)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/auth/tokens.py", line 21, in make_token
+    return self._make_token_with_timestamp(user, self._num_days(self._today()))
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/auth/tokens.py", line 64, in _make_token_with_timestamp
+    self._make_hash_value(user, timestamp),
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/auth/tokens.py", line 71, in _make_hash_value
+    login_timestamp = '' if user.last_login is None else user.last_login.replace(microsecond=0, tzinfo=None)
+AttributeError: 'Users' object has no attribute 'last_login'
+2018-06-08 16:10:36,883 [Thread-7:140639058310912] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /rsp/upload/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/rsp/views.py", line 43, in upload
+    message_save.save()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 823, in _save_table
+    forced_update)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 852, in _do_update
+    filtered = base_qs.filter(pk=pk_val)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '1234@qq.com'
+2018-06-08 16:11:41,933 [Thread-8:140639058310912] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /rsp/upload/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/rsp/views.py", line 43, in upload
+    message_save.save()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 823, in _save_table
+    forced_update)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 852, in _do_update
+    filtered = base_qs.filter(pk=pk_val)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '1234@qq.com'
+2018-06-08 16:17:22,629 [Thread-54:140639058310912] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /rsp/upload/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/rsp/views.py", line 43, in upload
+    message_save.save()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 823, in _save_table
+    forced_update)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 852, in _do_update
+    filtered = base_qs.filter(pk=pk_val)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '1234@qq.com'
+2018-06-08 16:22:19,129 [Thread-7:140220303345408] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /rsp/upload/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/rsp/views.py", line 42, in upload
+    message_save = Messages.create(data)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/rsp/models.py", line 34, in create
+    message = cls(email=data['email'], type=data['type'], message=data['message'], time=data['time'])
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 477, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/fields/related_descriptors.py", line 197, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "'1234@qq.com'": "Messages.email" must be a "Users" instance.
+2018-06-08 16:33:32,078 [Thread-7:139804243986176] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /rsp/upload/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/rsp/views.py", line 43, in upload
+    Users.objects.get(data['email'])
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/query.py", line 1150, in build_filter
+    arg, value = filter_expr
+ValueError: too many values to unpack (expected 2)
+2018-06-08 16:35:32,267 [Thread-33:140145757914880] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /rsp/upload/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/rsp/views.py", line 52, in upload
+    message_save.save()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 823, in _save_table
+    forced_update)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 872, in _do_update
+    return filtered._update(values) > 0
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 709, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1377, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1053, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1343, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py", line 767, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py", line 2248, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py", line 2243, in get_prep_value
+    return self.to_python(value)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/fields/__init__.py", line 2230, in to_python
+    params={'value': value},
+    django.core.exceptions.ValidationError: ["'2018-06-04:08:08:08' value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] format."]
+2018-06-08 16:38:15,554 [Thread-32:139818388535040] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 105, in get_messages
+    user_data = json.loads(str(request.path, encoding="utf-8"))
+TypeError: decoding str is not supported
+2018-06-08 16:40:33,878 [Thread-33:139818388535040] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 105, in get_messages
+    user_data = json.loads(str(request.path, encoding="utf-8"))
+TypeError: decoding str is not supported
+2018-06-08 16:45:18,645 [Thread-9:140592597538560] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/1234567@qq.com/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: get_messages() got an unexpected keyword argument 'email'
+2018-06-08 16:47:48,706 [Thread-7:139740044797696] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/1234567@qq.com/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 108, in get_messages
+    Users.objects.get(email=user_data['email'])
+TypeError: 'set' object is not subscriptable
+2018-06-08 16:59:37,817 [Thread-7:139655031564032] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/1234567@qq.com/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 119, in get_messages
+    for message in messages:
+TypeError: 'Messages' object is not iterable
+2018-06-08 17:11:35,050 [Thread-7:140154915960576] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/1234567@qq.com/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 126, in get_messages
+    'data': messages
+  File "/usr/lib/python3.5/json/__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python3.5/json/encoder.py", line 198, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.5/json/encoder.py", line 256, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.5/json/encoder.py", line 179, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <QuerySet [<Messages: 1234567@qq.com---todo---buy some eggs---2018-06-03 22:00:00+00:00---False>]> is not JSON serializable
+2018-06-08 17:14:20,189 [Thread-7:140265401317120] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/1234567@qq.com/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 126, in get_messages
+    'data': json.dump(messages)
+TypeError: dump() missing 1 required positional argument: 'fp'
+2018-06-08 17:15:36,182 [Thread-7:140701059770112] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/1234567@qq.com/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 126, in get_messages
+    'data': json.dumps(messages)
+  File "/usr/lib/python3.5/json/__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python3.5/json/encoder.py", line 198, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.5/json/encoder.py", line 256, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.5/json/encoder.py", line 179, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <QuerySet [<Messages: 1234567@qq.com---todo---buy some eggs---2018-06-03 22:00:00+00:00---False>]> is not JSON serializable
+2018-06-08 17:16:19,323 [Thread-7:139825870366464] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/1234567@qq.com/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 126, in get_messages
+    'data': json.dumps(messages)
+  File "/usr/lib/python3.5/json/__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python3.5/json/encoder.py", line 198, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.5/json/encoder.py", line 256, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.5/json/encoder.py", line 179, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <QuerySet [<Messages: Messages object (1234567@qq.com)>]> is not JSON serializable
+2018-06-08 17:32:36,184 [Thread-9:140161292044032] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/1234567@qq.com/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.ProgrammingError: (1146, "Table 'dingdang_data.django_session' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 117, in get_messages
+    if user_data['email'] in request.session['user_email']:
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1066, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'dingdang_data.django_session' doesn't exist")
+2018-06-08 17:38:39,410 [Thread-2:140662307456768] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/1234567@qq.com/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.ProgrammingError: (1146, "Table 'dingdang_data.django_session' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 117, in get_messages
+    if user_data['email'] in request.session['user_email']:
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1066, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'dingdang_data.django_session' doesn't exist")
+2018-06-08 17:40:13,076 [Thread-3:140237458036480] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/1234567@qq.com/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 191, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.ProgrammingError: (1146, "Table 'dingdang_data.django_session' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 117, in get_messages
+    if user_data['email'] in request.session['user_email']:
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 196, in _get_session
+    self._session_cache = self.load()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/db.py", line 34, in load
+    expire_date__gt=timezone.now()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1066, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'dingdang_data.django_session' doesn't exist")
+2018-06-08 17:42:23,422 [Thread-8:140458985539328] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/1234567@qq.com/get_messages/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/android/views.py", line 117, in get_messages
+    if user_data['email'] in request.session['user_email']:
+  File "/home/sean/.local/lib/python3.5/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'user_email'
+2018-06-08 17:50:20,271 [Thread-2:140713229125376] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /android/logout/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view dingdang_server.android.views.logout didn't return an HttpResponse object. It returned None instead.
+2018-06-11 09:49:05,479 [Thread-3:140024608683776] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /rsp/upload/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1366, "Incorrect string value: '\\xE4\\xB9\\xB0\\xE8\\x8B\\xB9...' for column 'message' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/rsp/views.py", line 52, in upload
+    message_save.save()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect string value: '\\xE4\\xB9\\xB0\\xE8\\x8B\\xB9...' for column 'message' at row 1")
+2018-06-11 10:23:22,034 [Thread-2:139752247236352] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /rsp/upload/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1366, "Incorrect string value: '\\xE4\\xB9\\xB0\\xE8\\x8B\\xB9...' for column 'message' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/rsp/views.py", line 52, in upload
+    message_save.save()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect string value: '\\xE4\\xB9\\xB0\\xE8\\x8B\\xB9...' for column 'message' at row 1")
+2018-06-11 10:27:50,933 [Thread-2:139624360748800] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /rsp/upload/
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1366, "Incorrect string value: '\\xE4\\xB9\\xB0\\xE8\\x8B\\xB9...' for column 'message' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sean/course_project/dingdang_server/dingdang_server/rsp/views.py", line 52, in upload
+    message_save.save()
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sean/.local/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/home/sean/.local/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect string value: '\\xE4\\xB9\\xB0\\xE8\\x8B\\xB9...' for column 'message' at row 1")

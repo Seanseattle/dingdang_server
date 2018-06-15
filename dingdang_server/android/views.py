@@ -104,38 +104,40 @@ def get_messages(request, email):
     user_data = {'email': email}
     logger.info('to get messages page')
     response = HttpResponse(content_type='application/json')
-    try:
-        Users.objects.get(email=user_data['email'])
-    except Users.DoesNotExist:
-        response.status_code = 401
+    # try:
+    #     Users.objects.get(email=user_data['email'])
+    # except Users.DoesNotExist:
+    #     response.status_code = 401
+    #     response.content = json.dumps({
+    #         'msg': 'you have not registered yet',
+    #         'data': ''
+    #     })
+    #     return response
+    # if user_data['email'] == request.session.get('user_email'):
+    messages = Messages.objects.filter(email=user_data['email'], active=True)
+    if messages:
+        for message in messages:
+            message.active = False
+            # message.save()
+        response.status_code = 200
+        messages_data = serializers.serialize('json', messages)
         response.content = json.dumps({
-            'msg': 'you have not registered yet',
-            'data': ''
+            'msg': 'get new messages successfully',
+            'data': messages_data
         })
-        return response
-    if user_data['email'] == request.session.get('user_email'):
-        messages = Messages.objects.filter(email=user_data['email'], active=True)
-        if messages:
-            for message in messages:
-                message.active = False
-                # message.save()
-            response.status_code = 200
-            messages_data = serializers.serialize('json', messages)
-            response.content = json.dumps({
-                'msg': 'get new messages successfully',
-                'data': messages_data
-            })
-        else:
-            response.status_code = 200
-            response.content = json.dumps({
-                'msg': 'no new message',
-                'data': ''
-            })
-        return response
     else:
-        response.status_code = 401
+        response.status_code = 200
         response.content = json.dumps({
-            'msg': 'you have not login yet',
+            'msg': 'no new message',
             'data': ''
         })
     return response
+
+
+# else:
+#     response.status_code = 401
+#     response.content = json.dumps({
+#         'msg': 'you have not login yet',
+#         'data': ''
+#     })
+# return response
