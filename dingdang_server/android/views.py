@@ -114,13 +114,12 @@ def get_messages(request, email):
     #     })
     #     return response
     # if user_data['email'] == request.session.get('user_email'):
-    messages = Messages.objects.filter(email=user_data['email'], active=True)
+    # messages = Messages.objects.values("type", "active", "message", "time").filter(email=user_data['email'],
+                                                                                   # active=True)
+    messages = Messages.objects.filter(email=user_data['email'], active=True).only("type", "active", "message")
     if messages:
-        for message in messages:
-            message.active = False
-            # message.save()
         response.status_code = 200
-        messages_data = serializers.serialize('json', messages)
+        messages_data = serializers.serialize('json', messages, fields=("type", "active", "message", "time"))
         response.content = json.dumps({
             'msg': 'get new messages successfully',
             'data': messages_data
@@ -131,6 +130,10 @@ def get_messages(request, email):
             'msg': 'no new message',
             'data': ''
         })
+    messages = Messages.objects.filter(email=user_data['email'], active=True).only("active")
+    for message in messages:
+        message.active = False
+        # message.save()
     return response
 
 
